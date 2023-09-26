@@ -37,8 +37,109 @@ var num = prompt("Enter any number");
 var num_one = document.getElementById("num_one"); 
 var incOne = increaseByOne(num);
 console.log("🚀 ~ file: script.js:39 ~ incOne:", incOne)
-num_one.innerHTML = `${num} after increament becomes ${incOne}`;
+num_one.innerHTML = `ANS : ${num} after increament becomes ${incOne}`;
 
 function increaseByOne(num) {
   return ++num;
 }
+
+//## 6 Create a program that takes a number as an input, decrements the number by -1 and returns the result.
+var numDecreament = prompt("Enter any number for decreament");
+var num_Dec = document.getElementById("num_Dec");
+var decNum = numDecreaseByOne(numDecreament)
+num_Dec.innerHTML = `ANS :${numDecreament} after decreament becomes ${decNum}.`
+
+function numDecreaseByOne(num) {
+  return --num;
+}
+
+//## 7 Create a function that takes a number and return square of a number
+var numSquare = prompt("Enter number for square");
+var numSquaring = forSquaring(numSquare);
+num_square.innerHTML = `ANS : Squaring of ${numSquare} is ${numSquaring}.`
+
+function forSquaring(a){
+   return a*a;
+}
+
+//## 8 check if the entered number is a positive or a negative integer
+var checkedNum = prompt("Enter any number for checking  weather it is positive or negative");
+if (checkedNum < 0){
+  var afterCheck = 'Negative';
+}else{
+  var afterCheck = 'Positive';
+}
+checked_Num.innerHTML = `ANS : Your given number is ${afterCheck}`
+
+//##9 Write a script to  convert the total currency to Pakistani Rupees. Perform all calculations in a single expression
+var currencyUS = 10;
+var currencyRiyal = 25;
+var totalRupees = (currencyUS*163)+(currencyRiyal*43);
+total_Rupees.innerHTML = `ANS : You have total ${totalRupees}  Pakistani Rupees,`
+
+//##11
+var cityName = prompt("Enter your city name : ");
+if (cityName.toLowerCase() === 'karachi'){
+  var yourCity = "Welcome to city of lights!"
+}else if (cityName.toLowerCase() === 'lahore'){
+  var yourCity = 'Welcome to historical city!'
+}else if (cityName.toLowerCase() === 'quetta'){
+  var yourCity = 'Welcome to cold city!'
+}else{
+  var yourCity = 'Please write correct city name!'
+}
+city_Name.innerHTML = `ANS : ${yourCity}`
+
+//##12
+const forAdd = (a,b) => {
+ return a+b;
+}
+var firstNum = prompt('Enter your first number : ');
+var opeartionSign = prompt('Enter operation (+, -, *, /, %)');
+var secondNum = prompt('Enter your second number :');
+var numOne = +firstNum;
+var numSec = +secondNum;
+if(opeartionSign === '+'){
+  var resultCal = forAdd(numOne,numSec);
+  console.log("🚀 ~ file: script.js:99 ~ resultCal:", resultCal)
+}else if (opeartionSign === '-') {
+  var resultCal = forSubtract(numOne,numSec);
+  console.log("🚀 ~ file: script.js:99 ~ resultCal:", resultCal)
+}else if (opeartionSign === '*') {
+  var resultCal = forMultiply(numOne,numSec);
+  console.log("🚀 ~ file: script.js:99 ~ resultCal:", resultCal)
+}else if (opeartionSign === '/') {
+  var resultCal = forDivision(numOne,numSec);
+  console.log("🚀 ~ file: script.js:99 ~ resultCal:", resultCal)
+}else if (opeartionSign === '%') {
+  var resultCal = forModule(numOne,numSec);
+  console.log("🚀 ~ file: script.js:99 ~ resultCal:", resultCal)
+}else{
+  var resultCal = `Please write number as input!`
+  console.log("🚀 ~ file: script.js:117 ~ resultCal:", resultCal)
+}
+cal_program.innerHTML = `ANS : ${numOne} ${opeartionSign} ${numSec} = ${resultCal}`
+
+ function forSubtract(a,b){
+  return a-b;
+ }
+ function forMultiply(a,b) {
+   return a*b;
+ }
+ function forDivision(a,b) {
+  return a/b;
+ }
+ function forModule(a,b){
+  return a%b;
+ }
+
+// ## 13
+var userSalary = prompt("Enter your salary : ");
+if(userSalary < 60000){
+  var answerIs = 'You are a junior developer!';
+}else if(userSalary >= 60000  && userSalary < 100000){
+  var answerIs = 'You are a web developer!';
+}else if(userSalary >= 100000){
+  var answerIs = 'You are a software engineer!'
+}
+user_Salary.innerHTML = `ANS 13 : ${answerIs}`;
